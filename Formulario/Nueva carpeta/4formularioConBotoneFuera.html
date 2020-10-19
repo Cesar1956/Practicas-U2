@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="PQG">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style media="screen">
+    .boton1 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+    .boton1:hover span{
+      padding-right: 50px;
+      background-color: #008CBA;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+      .boton1 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .boton1 span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .boton1:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    </style>
+</head>
+<body>
+
+  <form action="/action_page.php" method="get" id="form1">
+    <label for="nombre">Nombre:</label>     <input type="text" name="nombre"><br>
+    <label for="nombre">Apellidos:</label>  <input type="text" name="apellidos"><br>
+  </form>
+
+  <button type="submit" class="boton1" form="form1" value="enviar"><span>Enviar</span></button>
+
+</body>
+</html>
